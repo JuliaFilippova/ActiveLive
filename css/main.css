@@ -1,0 +1,437 @@
+/* -------------icon------------ */
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?78038000');
+  src: url('../font/fontello.eot?78038000#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?78038000') format('woff2'),
+       url('../font/fontello.woff?78038000') format('woff'),
+       url('../font/fontello.ttf?78038000') format('truetype'),
+       url('../font/fontello.svg?78038000#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?78038000#fontello') format('svg');
+  }
+}
+*/
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-linkedin:before { content: '\f30c'; } /* '' */
+/* ----------------specification---------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: #6c7279;
+}
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+    font-size: 14px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #2d3033;
+	line-height: 1.6em;
+}
+h1 {
+	font-size: 45px;
+	color: #fff;
+	margin-bottom: 25px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 14px;	
+}
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+	outline: none;
+}
+.btn {
+	font-size: 13px;
+	font-weight: 700;
+	background: #e84545;
+	color: #fff;
+	text-transform: uppercase;
+	width: 200px;
+	padding: 12px 0;
+	overflow: hidden;
+	position: relative;
+}
+.btn:before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: -150px;
+	width: 50px;
+	height: 100px;
+	background: linear-gradient(90deg, rgb(236, 185, 185, .1), rgba(251, 227, 227, 0.2));
+	transform: skewX(-45deg);
+}
+.btn:hover:before {
+	left: 300px;
+	transition: 1s;
+}
+.btn:hover {
+	color: #fff;
+}
+.btn:active {
+	color: #fad4d4;
+}
+.btn:focus {
+	box-shadow: none;
+}
+.subtitle {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+/* ----------------header---------------- */
+.header {
+	background: url('../img/background.png') no-repeat center center /cover;
+	padding: 28px 0 244px;
+	color: #fff;
+}
+.logo {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: flex;
+}
+.logo span {
+	color: #626fe4;
+	font-weight: 700;
+	display: inline-block;
+}
+.menu {
+	margin-top: 13px;
+	display: flex;
+	justify-content: flex-end;
+}
+.menu__item {
+	transition: .5s;
+	width: 110px;
+	text-align: center;
+	padding-bottom: 38px;
+	position: relative;
+}
+.menu__item:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0%;
+	height: 3px;
+	background: #9a9a9f;
+	transition: .5s;
+}
+.menu__item:hover:before {
+	width: 100%;
+	left: 0;
+}
+.menu__item:last-child {
+	text-align: right;
+}
+.menu__link {
+	text-transform: uppercase;
+}
+.offer {
+	text-align: center;
+	padding-top: 169px;
+	border-top: 1px solid #51525b;
+}
+.offer__subtitle {
+	font-size: 22px;
+	width: 556px;
+	margin: 0 auto;
+	line-height: unset;
+}
+.offer__btn {
+	margin-top: 29px;
+}
+/* ----------------features---------------- */
+.features {
+	padding-top: 121px;
+}
+.function {
+	text-align: center;
+	max-width: 300px;
+    margin: 0 auto 76px;
+}
+.function__title {
+	margin: 28px 0 16px;
+}
+/* ----------------gallery---------------- */
+.gallery {
+	padding: 29px 0 132px;
+}
+.work {
+	position: relative;
+	max-width: 300px;
+	margin: 0 auto;
+}
+.work__img {
+	display: block;
+	width: 100%;	
+	height: auto;
+	margin-top: 25px;
+}
+.overlay__title {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	position: relative;
+}
+.overlay__title:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	transition: 0.3s;
+	transform: scaleX(0);
+}
+.overlay__title:hover:before {
+	transform: scaleX(1);
+}
+.overlay {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+    color: #fff;
+    background-color: rgba(232, 69, 69, 0.90);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.6s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.overlay:hover {
+	opacity: 1;
+}
+/* ----------------team---------------- */
+.team {
+	background: #f1f2fd;
+	padding: 122px 0 120px;
+}
+.icon {
+	color: #c6cacc;
+	background: #fff;
+	font-size: 20px;
+	padding: 4px;
+	display: inline-block;
+	margin-right: 6px;
+}
+.icon:hover {
+	color: #e84545;
+}
+.icon:last-child {
+	margin-right: 0;
+}
+.developer__img {
+	max-width: 100%;
+}
+.developer__name {
+	text-transform: none;
+	margin-top: 21px;
+	margin-bottom: 0;
+}
+.developer__prof {
+	color: #e84545;
+	margin-bottom: 22px;
+}
+.developer__text {
+	margin-bottom: 27px;
+	line-height: 1.5em;
+}
+/* ----------------designer---------------- */
+.designer-girl {
+	background: url('../img/girl.png') no-repeat top right /cover;
+	height: 100%;
+}
+.block-text {
+	background: #53354a;
+	color: #fff;
+	width: 100%;
+	padding: 129px 55px 140px 67px;
+}
+.phrase {
+	font-size: 36px;
+	font-style: italic;
+	line-height: 1.2em;
+	margin-bottom: 28px;
+}
+/* ----------------download---------------- */
+.download {
+	padding: 89px 0 100px;
+}
+.start__title {
+	text-transform: none;
+}
+.start__subtitle {
+	color: #2d3033;
+	margin-bottom: 34px;
+}
+.start__btn {
+	width: 280px;
+	padding: 13px 0;
+}
+/* ----------------footer---------------- */
+.footer {
+	background: #3a3e64;
+	padding: 80px 0;
+	box-shadow: 0 -14px 0px rgb(49, 52, 84) inset;
+}
+.finish {
+	text-align: center;
+}
+.finish__title {
+	color: #fff;
+}
+.finish__text {
+	color: #afb0bc;
+	margin-bottom: 0;
+	line-height: 1.6em;
+}
+.finish__text_copy {
+	color: #808080;
+}
+.finish__symbol {
+	color: #e84545;
+}
+.finish__name {
+	color: #fff;
+}
+/*-----------------MEDIA QUERIES-----------------*/
+/*-------- 768-992px col-md-------*/
+@media screen and (max-width: 992px) {
+	.logo {
+		display: block;
+		margin-bottom: 40px;
+	}
+	.menu {
+		justify-content: center;
+	}
+	.function {
+		margin: 0 auto 40px;
+	}
+	.developer {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.phrase {
+		width: 90%;
+	}
+	.designer-girl {
+		height: 350px;
+	}
+	.block-text {
+		padding: 80px 0 70px 60px;
+	}
+}
+/*-------- 320-576px col-------*/
+@media screen and (max-width: 576px) {
+	h1 {
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 25px;
+	}
+	.features {
+		padding-top: 60px;
+	}
+	.gallery, 
+	.team {
+		padding: 100px 0 50px;
+	}
+	.footer {
+		padding: 60px 0 30px;
+	}
+	.offer {
+		padding-top: 100px;
+	}
+	.offer__subtitle {
+		font-size: 18px;
+		width: 80%;
+	}
+	.designer-girl {
+		height: 260px;
+	}
+	.block-text {
+		padding: 40px 0 30px 30px;
+	}
+	.phrase {
+		font-size: 24px;
+	}
+	.subtitle {
+		font-size: 12px;
+	}
+	.start__btn {
+		width: 70%;
+	}
+}
